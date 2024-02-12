@@ -4,7 +4,7 @@ import {DialogContent, DialogOverlay} from '@reach/dialog';
 import styled from 'styled-components/macro';
 import VisuallyHidden from "../VisuallyHidden";
 import Icon from "../Icon";
-import {COLORS, WEIGHTS} from "../../constants";
+import {WEIGHTS} from "../../constants";
 
 const MobileMenu = ({isOpen, onDismiss}) => {
 
@@ -36,7 +36,7 @@ const MobileMenu = ({isOpen, onDismiss}) => {
 const Overlay = styled(DialogOverlay)`
     position: fixed;
     inset: 0;
-    background-color: hsla(220deg 5% 40% / 0.8);
+    background-color: var(--color-backdrop-gray);
     display: flex;
     justify-content: end;
 `
@@ -58,13 +58,13 @@ const Nav = styled.nav`
 	& a {
 		text-decoration: none;
         text-transform: uppercase;
-		color: ${COLORS.gray["900"]};
+		color: var(--color-gray-900);
 		font-size: ${18 / 16}rem;
 		font-weight: ${WEIGHTS.medium};
     }
 	
 	& a:first-of-type {
-		color: ${COLORS.secondary}
+		color: var(--color-secondary)
 	}
 `
 const Footer = styled.footer`
@@ -76,7 +76,7 @@ const Footer = styled.footer`
 
     & a {
         text-decoration: none;
-        color: ${COLORS.gray["700"]};
+        color: var(--color-gray-700);
 		font-size: ${14 / 16}rem;
     }
 `
